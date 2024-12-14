@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 
 
 st.set_page_config(
-    page_title="YOLO",
+    page_title="GROUP 5",
     layout="wide"
 )
 
@@ -25,18 +25,18 @@ class MultiApp:
         
     def run():
         
-        st.sidebar.image(['logo_.jpg'], width=220,)
+        st.sidebar.image(['/home/afif/Cao/Yolo-Streamlit/baterflai.jpg'], width=280,)
         with st.sidebar:
             app = option_menu(
-                menu_title="page_names",
+                menu_title="BUTTERFLY",
                 options=['IMAGE','VIDEO','URL LINKS'],   
-                icons=['cloud-upload-fill','compass-fill','binoculars-fill'],
-                menu_icon='chat-text-fill',
+                icons=['cloud-upload','compass','binoculars'],
+                menu_icon='chat-text',
                 default_index=1,
                 styles={
                     "container": {"padding": "5!important","background-color":'#ff6666'},
-                    "icon": {"color": "white", "font-size": "23px"},
-                    "nav-link": {"color":"white","font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "blue"},
+                    "icon": {"color": "white", "font-size": "20px"},
+                    "nav-link": {"color":"white","font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "black"},
                     "nav-link-selected": {"background-color": "black"},}
                 )  
         if app == "IMAGE":
