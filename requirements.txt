@@ -1,1 +1,8 @@
-ultralytics
+streamlit==1.26.0
+streamlit-option-menu
+ultralytics==8.0.150
+opencv-python-headless==4.8.0.74
+numpy
+Pillow
+matplotlib
+pandas
