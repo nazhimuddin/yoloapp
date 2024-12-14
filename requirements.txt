@@ -1,2 +1,9 @@
-ultralytics
-opencv-python-headless
+streamlit==1.25.0  # Adjust the version to the one you're using
+streamlit-option-menu==0.3.2  # Include this if you use streamlit-option-menu
+ultralytics==8.0.150  # Replace with the specific YOLOv8 version you need
+opencv-python==4.8.0.74  # The latest stable OpenCV version; adjust as needed
+opencv-contrib-python==4.8.0.74  # For additional OpenCV modules (optional)
+numpy==1.24.3  # Required for YOLO and OpenCV
+pandas==1.5.3  # If you use pandas in your app
+matplotlib==3.7.2  # If you generate visualizations
+torch==2.0.1+cpu  # Replace with the appropriate PyTorch version
