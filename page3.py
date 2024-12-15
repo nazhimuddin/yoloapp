@@ -2,7 +2,7 @@ import streamlit as st
 from ultralytics import YOLO
 
 def text_detection(file):
-    model = YOLO("yolov8n.pt")
+    model = YOLO("best (1).pt")
     res = model.predict(file,conf=0.5,save=True)
     box = res[0].boxes.xyxy.tolist()
     res_plotted = res[0].plot()[:, :, ::-1]
