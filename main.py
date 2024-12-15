@@ -5,8 +5,6 @@ from pathlib import Path
 import page1,page2,page3
 from streamlit_option_menu import option_menu
 
-
-
 st.set_page_config(
     page_title="GROUP 5",
     layout="wide"
@@ -25,7 +23,7 @@ class MultiApp:
         
     def run():
         
-        st.sidebar.image(['/home/afif/Cao/Yolo-Streamlit/baterflai.jpg'], width=280,)
+        st.sidebar.image(['baterflai.jpg'], width=280,)
         with st.sidebar:
             app = option_menu(
                 menu_title="BUTTERFLY",

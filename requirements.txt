@@ -3,6 +3,6 @@ streamlit-option-menu
 ultralytics==8.0.150
 opencv-python-headless==4.8.0.74
 numpy
-Pillow
+Pillow==11.1.0
 matplotlib
 pandas
