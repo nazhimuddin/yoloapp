@@ -5,7 +5,7 @@ import PIL
 def text_detection(file):
     model = YOLO("best (1).pt")
     uploaded_image = PIL.Image.open(file)
-    res = model.predict(uploaded_image,conf=0.5,save=True)
+    res = model.predict(uploaded_image,conf=0.5,save=False)
     box = res[0].boxes.xyxy.tolist()
     res_plotted = res[0].plot()[:, :, ::-1]
     st.image(res_plotted, caption='Text Detections',use_column_width=True)
