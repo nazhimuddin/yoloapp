@@ -11,7 +11,7 @@ def display_tracker_options():
 
 def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     # Resize the image to a standard size
-    scale_percent = 60 # percent of original size
+    scale_percent = 50 # percent of original size
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
     dim = (width, height)
