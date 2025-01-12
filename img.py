@@ -8,7 +8,7 @@ def text_detection(file):
     res = model.predict(uploaded_image,conf=0.5,save=False)
     box = res[0].boxes.xyxy.tolist()
     res_plotted = res[0].plot()[:, :, ::-1]
-    st.image(res_plotted, caption='Text Detections',use_column_width=True)
+    st.image(res_plotted, caption='Text Detections',use_container_width=True)
     st.write("Number of the Detections : "+str(len(box)))
     return uploaded_image
 
@@ -26,7 +26,7 @@ def app(conf, model):
             else:
                 uploaded_image = PIL.Image.open(source_img)
                 st.image(source_img, caption="Uploaded Image",
-                         use_column_width=True)
+                         use_container_width=True)
         except Exception as ex:
             st.error("Error occurred while opening the image.")
             st.error(ex)
@@ -36,5 +36,5 @@ def app(conf, model):
             res = model.predict(uploaded_image,conf=0.5,save=False)
             box = res[0].boxes.xyxy.tolist()
             res_plotted = res[0].plot()[:, :, ::-1]
-            st.image(res_plotted, caption='Text Detections',use_column_width=True)
+            st.image(res_plotted, caption='Text Detections',use_container_width=True)
             st.write("Number of the Detections : "+str(len(box)))
