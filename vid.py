@@ -11,7 +11,11 @@ def display_tracker_options():
 
 def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     # Resize the image to a standard size
-    image = cv2.resize(image, (720, int(720*(9/16))))
+    scale_percent = 60 # percent of original size
+    width = int(image.shape[1] * scale_percent / 100)
+    height = int(image.shape[0] * scale_percent / 100)
+    dim = (width, height)
+    image = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
     # Display object tracking, if specified
     if is_display_tracking:
         res = model.track(image, conf=conf, persist=True, tracker=tracker)
