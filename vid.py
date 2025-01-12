@@ -100,7 +100,7 @@ def play_stored_video(conf, model):
                                              is_display_tracker,
                                              tracker
                                              )
-                        st.download_button("Download Output",image, "output.mp4", mime="video/mp4")
+                    st.download_button("Download Output",image, "output.mp4", mime="video/mp4")
                 else:
                     vid_cap.release()
                     break
