@@ -23,7 +23,7 @@ def text_detection(inputfile,outputfile):
         res = model.predict(im0,conf=0.5,save=True)
         res_plotted = res[0].plot()[:, :, ::-1]
         out.write(res_plotted)
-        st.video(data=outputfile)
+    st.video(data=outputfile)
 
 
 def app():
