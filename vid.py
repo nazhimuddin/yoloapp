@@ -29,7 +29,6 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
                    channels="BGR",
                    use_container_width=True
                    )
-    st.download_button("Download Output",st_frame.image, "output.mp4", mime="video/mp4")
 
 def get_youtube_stream_url(youtube_url):
     ydl_opts = {
@@ -101,6 +100,7 @@ def play_stored_video(conf, model):
                                              is_display_tracker,
                                              tracker
                                              )
+                        st.download_button("Download Output",image, "output.mp4", mime="video/mp4")
                 else:
                     vid_cap.release()
                     break
