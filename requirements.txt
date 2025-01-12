@@ -6,3 +6,4 @@ numpy
 Pillow
 matplotlib
 pandas
+yt-dlp==2024.7.16
