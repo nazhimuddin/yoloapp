@@ -36,5 +36,5 @@ def app(conf, model):
             res = model.predict(uploaded_image,conf=0.5,save=False)
             box = res[0].boxes.xyxy.tolist()
             res_plotted = res[0].plot()[:, :, ::-1]
-            st.image(res_plotted, caption='Text Detections',use_container_width=True)
+            st.image(res_plotted, caption='Text Detections',use_column_width=True)
             st.write("Number of the Detections : "+str(len(box)))
