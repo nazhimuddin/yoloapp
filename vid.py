@@ -11,7 +11,7 @@ def display_tracker_options():
 
 def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     # Resize the image to a standard size
-    scale_percent = 45 # percent of original size
+    scale_percent = 50 # percent of original size
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -100,7 +100,6 @@ def play_stored_video(conf, model):
                                              is_display_tracker,
                                              tracker
                                              )
-                    st.download_button("Download Output",image, "output.mp4", mime="video/mp4")
                 else:
                     vid_cap.release()
                     break
