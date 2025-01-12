@@ -26,7 +26,7 @@ def app(conf, model):
             else:
                 uploaded_image = PIL.Image.open(source_img)
                 st.image(source_img, caption="Uploaded Image",
-                         use_container_width=True)
+                         use_column_width=True)
         except Exception as ex:
             st.error("Error occurred while opening the image.")
             st.error(ex)
